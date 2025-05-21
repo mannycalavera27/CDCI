@@ -78,13 +78,13 @@
 			buildConfigurationList = DDA3646E2DDDB459000789DE /* Build configuration list for PBXNativeTarget "CDCI" */;
 			buildPhases = (
 				DDA364492DDDB457000789DE /* Sources */,
+				DDA364842DDE1BB2000789DE /* SwiftLint */,
 				DDA3644A2DDDB457000789DE /* Frameworks */,
 				DDA3644B2DDDB457000789DE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDA364812DDE057C000789DE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DDA3644F2DDDB457000789DE /* CDCI */,
@@ -101,13 +101,13 @@
 			buildConfigurationList = DDA364712DDDB459000789DE /* Build configuration list for PBXNativeTarget "CDCITests" */;
 			buildPhases = (
 				DDA364562DDDB459000789DE /* Sources */,
+				DDA364852DDE1C12000789DE /* SwiftLint */,
 				DDA364572DDDB459000789DE /* Frameworks */,
 				DDA364582DDDB459000789DE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDA364832DDE06B2000789DE /* PBXTargetDependency */,
 				DDA3645C2DDDB459000789DE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
@@ -149,7 +149,6 @@
 			mainGroup = DDA364442DDDB457000789DE;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DDA3647F2DDE0558000789DE /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DDA3644E2DDDB457000789DE /* Products */;
@@ -179,6 +178,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DDA364842DDE1BB2000789DE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Ensure Homebrew's bin directory is in the PATH for Apple Silicon Macs\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint --strict\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		DDA364852DDE1C12000789DE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Ensure Homebrew's bin directory is in the PATH for Apple Silicon Macs\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint --strict\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDA364492DDDB457000789DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,14 +239,6 @@
 			isa = PBXTargetDependency;
 			target = DDA3644C2DDDB457000789DE /* CDCI */;
 			targetProxy = DDA3645B2DDDB459000789DE /* PBXContainerItemProxy */;
-		};
-		DDA364812DDE057C000789DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = DDA364802DDE057C000789DE /* SwiftLintBuildToolPlugin */;
-		};
-		DDA364832DDE06B2000789DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = DDA364822DDE06B2000789DE /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -251,7 +281,7 @@
 				DEVELOPMENT_TEAM = U987X9F6HQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -315,7 +345,7 @@
 				DEVELOPMENT_TEAM = U987X9F6HQ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -459,30 +489,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		DDA3647F2DDE0558000789DE /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.59.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		DDA364802DDE057C000789DE /* SwiftLintBuildToolPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DDA3647F2DDE0558000789DE /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
-			productName = "plugin:SwiftLintBuildToolPlugin";
-		};
-		DDA364822DDE06B2000789DE /* SwiftLintBuildToolPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DDA3647F2DDE0558000789DE /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
-			productName = "plugin:SwiftLintBuildToolPlugin";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDA364452DDDB457000789DE /* Project object */;
 }
