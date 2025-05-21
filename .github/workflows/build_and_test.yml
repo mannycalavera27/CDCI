@@ -1,4 +1,4 @@
-name: Build and test
+name: Build, lint and test
 on:
   pull_request:
     branches:
@@ -23,5 +23,10 @@ jobs:
       - name: Install fastlane
         run: gem install fastlane
 
-      - name: Run tests
-        run: fastlane tests
+      - name: SwiftLint with args
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict --raise_if_swiftlint_error
+
+      - name: Run lint and tests
+        run: fastlane lint_and_tests
