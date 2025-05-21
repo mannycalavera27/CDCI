@@ -181,6 +181,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		DDA364842DDE1BB2000789DE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -199,6 +200,7 @@
 		};
 		DDA364852DDE1C12000789DE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
