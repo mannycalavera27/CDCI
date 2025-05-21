@@ -20,11 +20,17 @@ jobs:
         with:
           ruby-version: 3.2.2
 
-      - name: Install fastlane
-        run: gem install fastlane
+      - name: Create Gemfile with SwiftLint plugin
+        run: |
+          echo 'source "https://rubygems.org"' > Gemfile
+          echo 'gem "fastlane"' >> Gemfile
+          echo 'gem "fastlane-plugin-swiftlint"' >> Gemfile
 
-      - name: Install SwiftLint
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Install SwiftLint via brew
         run: brew install swiftlint
 
-      - name: Run lint and tests
-        run: fastlane lint_and_tests
+      - name: Run Fastlane lint and tests
+        run: bundle exec fastlane lint_and_tests
