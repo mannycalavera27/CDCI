@@ -14,19 +14,11 @@
 			remoteGlobalIDString = DDA3644C2DDDB457000789DE;
 			remoteInfo = CDCI;
 		};
-		DDA364652DDDB459000789DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DDA364452DDDB457000789DE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DDA3644C2DDDB457000789DE;
-			remoteInfo = CDCI;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DDA3644D2DDDB457000789DE /* CDCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA3645A2DDDB459000789DE /* CDCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDA364642DDDB459000789DE /* CDCIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDCIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,11 +30,6 @@
 		DDA3645D2DDDB459000789DE /* CDCITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CDCITests;
-			sourceTree = "<group>";
-		};
-		DDA364672DDDB459000789DE /* CDCIUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CDCIUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDA364612DDDB459000789DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +57,6 @@
 			children = (
 				DDA3644F2DDDB457000789DE /* CDCI */,
 				DDA3645D2DDDB459000789DE /* CDCITests */,
-				DDA364672DDDB459000789DE /* CDCIUITests */,
 				DDA3644E2DDDB457000789DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +66,6 @@
 			children = (
 				DDA3644D2DDDB457000789DE /* CDCI.app */,
 				DDA3645A2DDDB459000789DE /* CDCITests.xctest */,
-				DDA364642DDDB459000789DE /* CDCIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,29 +118,6 @@
 			productReference = DDA3645A2DDDB459000789DE /* CDCITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDA364632DDDB459000789DE /* CDCIUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DDA364742DDDB459000789DE /* Build configuration list for PBXNativeTarget "CDCIUITests" */;
-			buildPhases = (
-				DDA364602DDDB459000789DE /* Sources */,
-				DDA364612DDDB459000789DE /* Frameworks */,
-				DDA364622DDDB459000789DE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DDA364662DDDB459000789DE /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DDA364672DDDB459000789DE /* CDCIUITests */,
-			);
-			name = CDCIUITests;
-			packageProductDependencies = (
-			);
-			productName = CDCIUITests;
-			productReference = DDA364642DDDB459000789DE /* CDCIUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +132,6 @@
 						CreatedOnToolsVersion = 16.3;
 					};
 					DDA364592DDDB459000789DE = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = DDA3644C2DDDB457000789DE;
-					};
-					DDA364632DDDB459000789DE = {
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = DDA3644C2DDDB457000789DE;
 					};
@@ -202,7 +153,6 @@
 			targets = (
 				DDA3644C2DDDB457000789DE /* CDCI */,
 				DDA364592DDDB459000789DE /* CDCITests */,
-				DDA364632DDDB459000789DE /* CDCIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,13 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DDA364582DDDB459000789DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDA364622DDDB459000789DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +189,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDA364602DDDB459000789DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +196,6 @@
 			isa = PBXTargetDependency;
 			target = DDA3644C2DDDB457000789DE /* CDCI */;
 			targetProxy = DDA3645B2DDDB459000789DE /* PBXContainerItemProxy */;
-		};
-		DDA364662DDDB459000789DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DDA3644C2DDDB457000789DE /* CDCI */;
-			targetProxy = DDA364652DDDB459000789DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -484,40 +415,6 @@
 			};
 			name = Release;
 		};
-		DDA364752DDDB459000789DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U987X9F6HQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.softlab.CDCIUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CDCI;
-			};
-			name = Debug;
-		};
-		DDA364762DDDB459000789DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U987X9F6HQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.softlab.CDCIUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CDCI;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,15 +441,6 @@
 			buildConfigurations = (
 				DDA364722DDDB459000789DE /* Debug */,
 				DDA364732DDDB459000789DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DDA364742DDDB459000789DE /* Build configuration list for PBXNativeTarget "CDCIUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DDA364752DDDB459000789DE /* Debug */,
-				DDA364762DDDB459000789DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
