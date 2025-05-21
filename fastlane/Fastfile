@@ -25,7 +25,7 @@ platform :ios do
   desc "Run SwiftLint"
   lane :lint do
     swiftlint(
-      strict: false,
+      strict: true,
       raise_if_swiftlint_error: true
     )
   end
