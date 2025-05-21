@@ -23,10 +23,8 @@ jobs:
       - name: Install fastlane
         run: gem install fastlane
 
-      - name: SwiftLint with args
-        uses: norio-nomura/action-swiftlint@3.2.1
-        with:
-          args: --strict --raise_if_swiftlint_error
+      - name: Install SwiftLint
+        run: brew install swiftlint
 
       - name: Run lint and tests
         run: fastlane lint_and_tests
