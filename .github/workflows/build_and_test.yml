@@ -23,8 +23,11 @@ jobs:
       - name: Install fastlane
         run: gem install fastlane
 
-      - name: Install SwiftLint
-        run: brew install swiftlint
+      # - name: Install SwiftLint
+      #   run: brew install swiftlint
+
+      - name: Resolve Swift Packages
+        run: swift package resolve
 
       - name: Run lint and tests
         run: fastlane lint_and_tests
