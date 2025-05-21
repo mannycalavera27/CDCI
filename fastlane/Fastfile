@@ -16,8 +16,25 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Executes unit tests"
+  desc "Executes Swiftlint and Unit Tests"
+  lane :lint_and_tests do
+    lint
+    tests
+  end
+
+  desc "Run SwiftLint"
+  lane :lint do
+    swiftlint(
+      strict: true,
+      raise_if_swiftlint_error: true
+    )
+  end
+
+  desc "Executes Unit Tests"
   lane :tests do
-    run_tests(scheme: "CDCI")
+    run_tests(
+      scheme: "CDCI",
+      destination: "platform=iOS Simulator,name=iPhone 16 Pro,arch=arm64"
+    )
   end
 end

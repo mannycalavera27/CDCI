@@ -78,6 +78,7 @@
 			buildConfigurationList = DDA3646E2DDDB459000789DE /* Build configuration list for PBXNativeTarget "CDCI" */;
 			buildPhases = (
 				DDA364492DDDB457000789DE /* Sources */,
+				DDA364842DDE1BB2000789DE /* SwiftLint */,
 				DDA3644A2DDDB457000789DE /* Frameworks */,
 				DDA3644B2DDDB457000789DE /* Resources */,
 			);
@@ -100,6 +101,7 @@
 			buildConfigurationList = DDA364712DDDB459000789DE /* Build configuration list for PBXNativeTarget "CDCITests" */;
 			buildPhases = (
 				DDA364562DDDB459000789DE /* Sources */,
+				DDA364852DDE1C12000789DE /* SwiftLint */,
 				DDA364572DDDB459000789DE /* Frameworks */,
 				DDA364582DDDB459000789DE /* Resources */,
 			);
@@ -146,6 +148,8 @@
 			);
 			mainGroup = DDA364442DDDB457000789DE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DDA3644E2DDDB457000789DE /* Products */;
 			projectDirPath = "";
@@ -173,6 +177,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DDA364842DDE1BB2000789DE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Ensure Homebrew's bin directory is in the PATH for Apple Silicon Macs\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint --strict\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		DDA364852DDE1C12000789DE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Ensure Homebrew's bin directory is in the PATH for Apple Silicon Macs\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint --strict\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDA364492DDDB457000789DE /* Sources */ = {
@@ -238,7 +283,7 @@
 				DEVELOPMENT_TEAM = U987X9F6HQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -302,7 +347,7 @@
 				DEVELOPMENT_TEAM = U987X9F6HQ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

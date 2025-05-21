@@ -1,4 +1,4 @@
-name: Build and test
+name: Build, lint and test
 on:
   pull_request:
     branches:
@@ -23,5 +23,8 @@ jobs:
       - name: Install fastlane
         run: gem install fastlane
 
-      - name: Run tests
-        run: fastlane tests
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run lint and tests
+        run: fastlane lint_and_tests
